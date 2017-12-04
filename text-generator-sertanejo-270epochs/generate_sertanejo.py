@@ -78,7 +78,7 @@ model.compile(loss="categorical_crossentropy", optimizer="rmsprop")
 
 model.load_weights(WEIGHTS)
 
-result = generate_text(model, args['generate_length'], VOCAB_SIZE, ix_to_char, 'Meu nome')
+result = generate_text(model, args['generate_length'], VOCAB_SIZE, ix_to_char, INITIAL_STRING)
 with open('result.txt', 'w+') as f:
 	f.write(result)
 
